@@ -1,0 +1,28 @@
+tags:
+  - name: Media Search
+    description: Media Search
+
+paths:
+  # [GET] decode
+  /v1/media:
+    get:
+      tags:
+        - Search Query
+      summary: Get music and books
+      parameters:
+        - name: q
+          in: query
+          description: search query
+          required: true
+          type: string
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        500:
+          description: 'Server Error'
+
+schemes:
+  - https
+  - http
