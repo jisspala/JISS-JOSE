@@ -15,6 +15,7 @@ class MediaMiddleware {
     res: Response,
     next: NextFunction
   ): Promise<void> => {
+    console.log('req.query>>>>>>', req.query);
     const { error: validationError } = this.searchSchema.validate(req.query);
     if (validationError) {
       res.status(400).json({ error: constants.INVALID_TERM });
