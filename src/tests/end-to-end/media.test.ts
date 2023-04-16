@@ -2,6 +2,8 @@ import supertest, { Response } from 'supertest';
 import App from '../../app';
 import constants from '../../utils/constants';
 
+jest.setTimeout(60000);
+
 describe('Media Search Api End to End Testing', () => {
   const app = new App();
   app.start();

@@ -2,6 +2,7 @@ export interface Constants {
   INVALID_TERM: string;
   DEVELOPMENT: string;
   PRODUCTION: string;
+  API_ERROR: string;
 }
 
 export interface Status {
