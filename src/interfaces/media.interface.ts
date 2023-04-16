@@ -3,6 +3,8 @@ export interface Constants {
   DEVELOPMENT: string;
   PRODUCTION: string;
   API_ERROR: string;
+  OK: string;
+  'NOT-OK': string;
 }
 
 export interface Status {
@@ -31,4 +33,10 @@ export interface ApiResult<T> {
 export interface FinalResult {
   books: Book[] | [];
   albums: Album[] | [];
+}
+export interface HealthResult {
+  albumApi?: string;
+  albumApiTime?: number;
+  bookApi?: string;
+  bookApiTime?: number;
 }

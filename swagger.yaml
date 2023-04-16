@@ -3,7 +3,7 @@ tags:
     description: Media Search
 
 paths:
-  # [GET] decode
+  # [GET] media
   /v1/media:
     get:
       tags:
@@ -22,7 +22,19 @@ paths:
           description: 'Bad Request'
         500:
           description: 'Server Error'
-
+  # [GET] health
+  /v1/health:
+    get:
+      tags:
+        - Search Query
+      summary: health
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        500:
+          description: 'Server Error'
 schemes:
   - https
   - http

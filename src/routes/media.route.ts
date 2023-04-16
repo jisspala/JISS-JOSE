@@ -19,6 +19,10 @@ class MediaRoute {
       this.mediaMiddleware.validate,
       this.mediaController.getMedia
     );
+    this.router.get(
+      `/${this.routeVersion1}/health`,
+      this.mediaController.getHealth
+    );
   }
 
   public getRouter() {

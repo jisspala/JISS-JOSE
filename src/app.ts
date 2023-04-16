@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import MediaRoute from './routes/media.route';
 import { PORT, HOST_NAME } from './config';
+import logger from './utils/logger';
 
 import swaggerJSdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
@@ -27,8 +28,8 @@ class App {
 
   public start(): void {
     this.app.listen(3000, () => {
-      console.info(`App is started as  http://${HOST_NAME}:${PORT}`);
-      console.info(
+      logger.info(`App is started as  http://${HOST_NAME}:${PORT}`);
+      logger.info(
         `API doc is available at  http://${HOST_NAME}:${PORT}/api-docs`
       );
     });

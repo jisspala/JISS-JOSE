@@ -1,14 +1,15 @@
 import App from './app';
+import logger from './utils/logger';
 
 const app = new App();
 app.start();
 
 process.on('uncaughtException', (error) => {
-  console.error(error, 'uncaughtException');
+  logger.error(error, 'uncaughtException');
   process.exit(1);
 });
 
 process.on('unhandledRejection', (error) => {
-  console.error(error, 'unhandledRejection');
+  logger.error(error, 'unhandledRejection');
   process.exit(1);
 });
