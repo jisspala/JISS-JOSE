@@ -35,7 +35,7 @@ class MediaController {
 
       res.status(200).json(finalResult);
     } catch (error) {
-      logger.log(error);
+      logger.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
   };
@@ -44,7 +44,7 @@ class MediaController {
       const healthResult = await this.mediaRepository.getHealth();
       res.status(200).json(healthResult.data);
     } catch (error) {
-      logger.log(error);
+      logger.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
   };

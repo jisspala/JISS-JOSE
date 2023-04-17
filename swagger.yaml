@@ -1,6 +1,6 @@
 tags:
-  - name: Media Search
-    description: Media Search
+  - name: Media Search Version:v1.0
+    description: Search books and albums by keywords
 
 paths:
   # [GET] media

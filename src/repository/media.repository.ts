@@ -42,7 +42,7 @@ class MediaRepository {
         apiTime: apiTime,
       };
     } catch (err) {
-      logger.log(err);
+      logger.error(err);
       result = {
         success: false,
         message: constants.API_ERROR,
@@ -131,7 +131,7 @@ class MediaRepository {
         result.bookApiTime = apiTime;
       }
     } catch (err) {
-      logger.log(err);
+      logger.error(err);
       result.bookApi = constants['NOT-OK'];
     }
 
