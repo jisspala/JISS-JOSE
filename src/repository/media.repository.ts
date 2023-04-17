@@ -91,9 +91,8 @@ class MediaRepository {
   }
 
   public async getHealth(): Promise<ApiResult<HealthResult>> {
-    let ApiResult: ApiResult<HealthResult>;
+    const result: HealthResult = {};
 
-    let result: HealthResult = {};
     let response;
     let apiTime: number;
 
@@ -136,11 +135,10 @@ class MediaRepository {
       result.bookApi = constants['NOT-OK'];
     }
 
-    ApiResult = {
+    return {
       success: true,
       data: result,
     };
-    return ApiResult;
   }
 }
 
