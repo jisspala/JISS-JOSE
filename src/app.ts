@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
 import MediaRoute from './routes/media.route';
-import { PORT, HOST_NAME } from './config';
+import { HOST_NAME } from './config';
 import logger from './utils/logger';
 
 import swaggerJSdoc from 'swagger-jsdoc';
@@ -26,8 +26,8 @@ class App {
     this.app.use('/', mediaRoute.getRouter());
   }
 
-  public start(): void {
-    this.app.listen(3000, () => {
+  public start(PORT: string): void {
+    this.app.listen(PORT || 3000, () => {
       logger.info(`App is started as  http://${HOST_NAME}:${PORT}`);
       logger.info(
         `API doc is available at  http://${HOST_NAME}:${PORT}/api-docs`

@@ -1,8 +1,9 @@
+import { PORT } from './config';
 import App from './app';
 import logger from './utils/logger';
 
 const app = new App();
-app.start();
+app.start(PORT as string);
 
 process.on('uncaughtException', (error) => {
   logger.error(error, 'uncaughtException');

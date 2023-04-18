@@ -1,7 +1,9 @@
 import { config } from 'dotenv';
 import constants from '../utils/constants';
+process.env.NODE_ENV = process.env.NODE_ENV
+  ? process.env.NODE_ENV
+  : constants.DEVELOPMENT;
+config({ path: `.env.${process.env.NODE_ENV}` });
 
-config({ path: `.env.${process.env.NODE_ENV || constants.DEVELOPMENT}` });
-
-export const { NODE_ENV, PORT, HOST_NAME, MAX_RETRIES, MAX_RESULTS } =
+export const { NODE_ENV, PORT, HOST_NAME, API_TIMEOUT, MAX_RESULTS } =
   process.env;

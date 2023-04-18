@@ -1,18 +1,17 @@
 import supertest, { Response } from 'supertest';
+
 import App from '../../app';
 import constants from '../../utils/constants';
 
-jest.setTimeout(60000);
-
 describe('Media Search Api End to End Testing', () => {
   const app = new App();
-  app.start();
+  app.start('3000');
   const request: supertest.SuperTest<supertest.Test> = supertest(
     app.getServer()
   );
 
   describe('[GET] /media', () => {
-    it('should provide Medias  with propper message', async () => {
+    it('should provide Medias  with proper message', async () => {
       const res: Response = await request.get('/v1/media?q=test');
       expect(res.statusCode).toEqual(200);
       expect(res.body).toHaveProperty('books');

@@ -1,4 +1,6 @@
 import { Request, Response } from 'express';
+
+import constants from '../utils/constants';
 import MediaRepository from '../repository/media.repository';
 import { FinalResult, Album, Book } from '../interfaces/media.interface';
 import logger from '../utils/logger';
@@ -36,16 +38,17 @@ class MediaController {
       res.status(200).json(finalResult);
     } catch (error) {
       logger.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: constants.INTERNAL_ERROR });
     }
   };
+
   public getHealth = async (req: Request, res: Response): Promise<void> => {
     try {
       const healthResult = await this.mediaRepository.getHealth();
       res.status(200).json(healthResult.data);
     } catch (error) {
       logger.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: constants.INTERNAL_ERROR });
     }
   };
 }

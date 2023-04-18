@@ -1,10 +1,12 @@
 export interface Constants {
+  INTERNAL_ERROR: string;
   INVALID_TERM: string;
   DEVELOPMENT: string;
   PRODUCTION: string;
   API_ERROR: string;
   OK: string;
   'NOT-OK': string;
+  TEST_KEYWORD: string;
 }
 
 export interface Status {
@@ -39,4 +41,12 @@ export interface HealthResult {
   albumApiTime?: number;
   bookApi?: string;
   bookApiTime?: number;
+}
+
+export interface BookApi {
+  volumeInfo: { title: string; authors: string[] };
+}
+export interface AlbumApi {
+  collectionName: string;
+  artistName: string;
 }

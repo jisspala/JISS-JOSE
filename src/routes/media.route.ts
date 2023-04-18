@@ -1,4 +1,5 @@
 import { Router } from 'express';
+
 import MediaController from '../controllers/media.controller';
 import MediaMiddleware from '../middlewares/media.middleware';
 

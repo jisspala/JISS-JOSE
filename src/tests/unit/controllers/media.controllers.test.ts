@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 import MediaController from '../../../controllers/media.controller';
 import MediaRepository from '../../../repository/media.repository';
 
@@ -41,7 +42,7 @@ jest.mock('../../../repository/media.repository', () => {
 });
 
 describe('MediaController Testing', () => {
-  describe('Encode', () => {
+  describe('Search', () => {
     it('should return media search results ', async () => {
       const mediaController: MediaController = new MediaController();
       const mediaRepository: MediaRepository = new MediaRepository();
