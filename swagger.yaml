@@ -1,0 +1,40 @@
+tags:
+  - name: Media Search Version:v1.0
+    description: Search books and albums by keywords
+
+paths:
+  # [GET] media
+  /v1/media:
+    get:
+      tags:
+        - Search Query
+      summary: Get music and books
+      parameters:
+        - name: q
+          in: query
+          description: search query
+          required: true
+          type: string
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        500:
+          description: 'Server Error'
+  # [GET] health
+  /v1/health:
+    get:
+      tags:
+        - Search Query
+      summary: health
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        500:
+          description: 'Server Error'
+schemes:
+  - https
+  - http
