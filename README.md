@@ -1,7 +1,7 @@
 ## Media Search
 
 This is a simple media search application that provides a REST API to books from google books and albums from apple.
-![enter image description here](https://raw.githubusercontent.com/jisspala/JISS-JOSE/dev/docs/doc.png)
+![enter image description here](https://github.com/jisspala/JISS-JOSE/blob/dev/doc/doc.png)
 
 ## Installation
 
