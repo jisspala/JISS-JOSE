@@ -14,7 +14,7 @@ You can access the Swagger GUI to try out the API by visiting `http://localhost:
 
 ### Endpoints
 
-- `GET /v1/media`: search books and albums - Query parameter : **q** - "search term" - Response : It will be a array of books and albums .  x-albums-api-response-time` and `x-books-api-response-time` are two headers which giving the downstream apis response time
+- `GET /v1/media`: search books and albums - Query parameter : **q** - "search term" - Response : It will be a array of books and albums .  `x-albums-api-response-time` and `x-books-api-response-time` are two headers which giving the downstream apis response time
 - `GET v1/health`: Get all health details and response times of downstream apis
 
 ## Run and Test in Local
